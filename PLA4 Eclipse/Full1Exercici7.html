@@ -2,16 +2,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>PLA 3, Full 1, Exercicis 4 i 5</title>
+<title>PLA 3, Full 1, Exercici 7</title>
 <script src="scriptsPLA4.js"></script>
 </head>
 <body>
-<h3>PLA 3, Full 1, Exercici 7</h3>
+	<h3>PLA 3, Full 1, Exercici 7</h3>
 	<script>
-	var inputCadena = (prompt("Introdueix la cadena de números a analitzar:", ""))
-		document.write("Donada la cadena "+ inputCadena + "...");
-	<br>
-		document.write("<br>" + exercici7(inputCadena, 0) + " vegades 0");
+		var inputCadena = (prompt("Introdueix la cadena de números a analitzar:", ""))
+		document.write("Donada la cadena " + inputCadena + "...");
+
+		document.write("<br>" + "<br>" + exercici7(inputCadena, 0) + " vegades 0");
 		document.write("<br>" + exercici7(inputCadena, 1) + " vegades 1");
 		document.write("<br>" + exercici7(inputCadena, 2) + " vegades 2");
 		document.write("<br>" + exercici7(inputCadena, 3) + " vegades 3");
@@ -21,10 +21,12 @@
 		document.write("<br>" + exercici7(inputCadena, 7) + " vegades 7");
 		document.write("<br>" + exercici7(inputCadena, 8) + " vegades 8");
 		document.write("<br>" + exercici7(inputCadena, 9) + " vegades 9");
+	
 	</script>
 	<br>
 	<br>
 	<button onclick="history.go(0)">Repetir exercici</button>
-	<button onclick="window.location.href='Home.html'">Tornar a 'Home'</button>
+	<button onclick="window.location.href='Home.html'">Tornar a
+		'Home'</button>
 </body>
 </html>

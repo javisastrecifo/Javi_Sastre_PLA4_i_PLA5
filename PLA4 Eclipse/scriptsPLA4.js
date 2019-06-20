@@ -51,8 +51,8 @@ function exercici4(inputUsuari1, inputUsuari2) {
 }
 
 function exercici6(inputUsuari1, inputUsuari2) {
-	var inputCadena = inputUsuari1
-	var inputLletra = inputUsuari2
+	var inputCadena = inputUsuari1;
+	var inputLletra = inputUsuari2;
 	var llistaPosicions = [ "primera", "segona", "tercera", "quarta",
 			"cinquena", "sisena", "setena", "vuitena", "novena", "desena",
 			"onzena", "dotzena", "tretzena", "catorzena", "quinzena",
@@ -66,11 +66,23 @@ function exercici6(inputUsuari1, inputUsuari2) {
 	return llistaResposta.join();
 }
 
-function exercici7(input1, input2){
-	var cadena = input1
-	var numero = input1
-		for (var posicioLletra = 0; posicioLletra <= inputCadena.length; posicioLletra++){
-		
+function exercici7(input1, input2) {
+	var cadena = input1;
+	var inNumero = input2;
+	var resultat = 0;
+	for (var posicio = 0; posicio <= cadena.length; posicio++) {
+		if (cadena.charAt(posicio) == inNumero) {
+			resultat++;
+		}
 	}
-return 	
+	if (inNumero == 0) {
+		resultat = resultat - 1;
+	} else {
+		resultat
+	}
+	return resultat
 }
+
+
+
+
