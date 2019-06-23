@@ -2,7 +2,7 @@
  * 
  */
 
-function exercici1() {
+function exercici11() {
 	var inputCadena = "ABACDAEFAGHAABAH";
 	var numeroCoincidencies = 0;
 	for (posicioLletra = 0; posicioLletra <= inputCadena.length; posicioLletra++) {
@@ -13,7 +13,7 @@ function exercici1() {
 	return numeroCoincidencies;
 }
 
-function exercici2(inputUsuari) {
+function exercici12(inputUsuari) {
 	var inputCadena = "ABACDAEFAGHAABAH"
 	var inputLletra = inputUsuari;
 	var numeroCoincidencies = 0;
@@ -25,7 +25,7 @@ function exercici2(inputUsuari) {
 	return numeroCoincidencies;
 }
 
-function exercici3(inputUsuari1, inputUsuari2) {
+function exercici13(inputUsuari1, inputUsuari2) {
 	var inputCadena = inputUsuari1
 	var inputLletra = inputUsuari2;
 	var numeroCoincidencies = 0;
@@ -37,7 +37,7 @@ function exercici3(inputUsuari1, inputUsuari2) {
 	return numeroCoincidencies
 }
 
-function exercici4(inputUsuari1, inputUsuari2) {
+function exercici14(inputUsuari1, inputUsuari2) {
 	var inputCadena = inputUsuari1;
 	var inputLletra = inputUsuari2;
 	var lletraLocalitzada = 0;
@@ -50,7 +50,7 @@ function exercici4(inputUsuari1, inputUsuari2) {
 	return lletraLocalitzada;
 }
 
-function exercici6(inputUsuari1, inputUsuari2) {
+function exercici16(inputUsuari1, inputUsuari2) {
 	var inputCadena = inputUsuari1;
 	var inputLletra = inputUsuari2;
 	var llistaPosicions = [ "primera", "segona", "tercera", "quarta",
@@ -87,7 +87,7 @@ function exercici6(inputUsuari1, inputUsuari2) {
 	return construccioResposta;
 }
 
-function exercici7(input1, input2) {
+function exercici17(input1, input2) {
 	var cadena = input1;
 	var inNumero = input2;
 	var resultat = 0;
@@ -104,7 +104,7 @@ function exercici7(input1, input2) {
 	return resultat
 }
 
-function exercici8(input1) {
+function exercici18(input1) {
 	var cadena = input1;
 	var coincidencies = 0;
 	var construccioResposta = "";
@@ -116,7 +116,7 @@ function exercici8(input1) {
 			if (cadena.charAt(casella) == comptador09) {
 				coincidencies++;
 				detall += "<br>" + "Caracter " + comptador09 + " a la posicio "
-						+ casella + ".";
+						+ (casella + 1) + ".";
 			}
 		}
 
@@ -125,4 +125,207 @@ function exercici8(input1) {
 			+ coincidencies + " caracters numerics." + detall;
 	return construccioResposta
 
+}
+
+function exercici21(input1, input2) {
+	var cadena = input1;
+	var numero = input2;
+	var resposta = "";
+	var coincidencies = 0;
+	var detall = "";
+
+	for (var casella = 0; casella < cadena.length; casella++) {
+		if (cadena.charAt(casella) > numero) {
+			coincidencies++, detall += "<br>" + "Caracter "
+					+ cadena.charAt(casella) + " a la posicio " + (casella + 1)
+					+ ".";
+		}
+	}
+	resposta = "<br>" + "Donada la cadena " + cadena + "..." + "<br>"
+			+ "S'han trobat " + coincidencies + " numeros mes grans que "
+			+ numero + ". " + detall;
+
+	return resposta
+}
+
+function exercici22(input1) {
+	var cadena = input1;
+	var resposta = "Donada la cadena" + cadena + "..." + "<br>";
+	var alfabet = [ "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
+			"m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x",
+			"y", "z" ];
+	var llibreria = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+			0, 0, 0, 0, 0, 0, 0, 0 ];
+
+	for (var casella = 0; casella < cadena.length; casella++) {
+		for (var comptadorLletres = 0; comptadorLletres < alfabet.length; comptadorLletres++) {
+			if (cadena.charAt(casella) == alfabet[comptadorLletres]) {
+				llibreria[comptadorLletres]++;
+			}
+		}
+	}
+	for (i = 0; i < alfabet.length; i++) {
+		resposta += "<br>" + llibreria[i] + " vegades " + alfabet[i] + ".";
+	}
+
+	return resposta;
+}
+
+function exercici23() {
+	var llista1 = [ Math.floor(Math.random() * 10),
+			Math.floor(Math.random() * 10), Math.floor(Math.random() * 10),
+			Math.floor(Math.random() * 10), Math.floor(Math.random() * 10) ];
+	var llista2 = [ Math.floor(Math.random() * 10),
+			Math.floor(Math.random() * 10), Math.floor(Math.random() * 10),
+			Math.floor(Math.random() * 10), Math.floor(Math.random() * 10) ];
+	var llista3 = [ Math.floor(Math.random() * 10),
+			Math.floor(Math.random() * 10), Math.floor(Math.random() * 10),
+			Math.floor(Math.random() * 10), Math.floor(Math.random() * 10) ];
+	var llista4 = [ Math.floor(Math.random() * 10),
+			Math.floor(Math.random() * 10), Math.floor(Math.random() * 10),
+			Math.floor(Math.random() * 10), Math.floor(Math.random() * 10) ];
+	var llista5 = [ Math.floor(Math.random() * 10),
+			Math.floor(Math.random() * 10), Math.floor(Math.random() * 10),
+			Math.floor(Math.random() * 10), Math.floor(Math.random() * 10) ];
+
+	var llistes = "<br>" + llista1.join() + "<br>" + llista2.join() + "<br>"
+			+ llista3.join() + "<br>" + llista4.join() + "<br>"
+			+ llista5.join();
+	;
+	var resposta = "<br>" + "La suma de la diagonal es "
+			+ (llista1[0] + llista2[1] + llista3[2] + llista4[3] + llista5[4])
+			+ ".";
+	+".";
+	return llistes + resposta;
+}
+
+function exercici25() {
+	var llista1 = [];
+	var llista2 = [];
+	var llista3 = [];
+	var llista4 = [];
+	var llista5 = [];
+	var llistes = "";
+	var resposta = "";
+
+	var pregunta = prompt(
+			"Introdueix els 5 caracters de la primera filera (de l'1 al 9, sense comes )",
+			"12345");
+	for (var i = 0; i < 5; i++) {
+		llista1.push(parseInt(pregunta.charAt(i)));
+	}
+	var pregunta = prompt(
+			"Introdueix els 5 caracters de la segona filera (de l'1 al 9, sense comes )",
+			"12345");
+	for (var j = 0; j < 5; j++) {
+		llista2.push(parseInt(pregunta.charAt(j)));
+	}
+	var pregunta = prompt(
+			"Introdueix els 5 caracters de la tercera filera (de l'1 al 9, sense comes )",
+			"12345");
+	for (var k = 0; k < 5; k++) {
+		llista3.push(parseInt(pregunta.charAt(k)));
+	}
+	var pregunta = prompt(
+			"Introdueix els 5 caracters de la quarta filera (de l'1 al 9, sense comes )",
+			"12345");
+	for (var l = 0; l < 5; l++) {
+		llista4.push(parseInt(pregunta.charAt(l)));
+	}
+	var pregunta = prompt(
+			"Introdueix els 5 caracters de la cinquena filera (de l'1 al 9, sense comes )",
+			"12345");
+	for (var m = 0; m < 5; m++) {
+		llista5.push(parseInt(pregunta.charAt(m)));
+	}
+
+	resposta = "<br>" + "La suma de la diagonal es "
+			+ (llista1[0] + llista2[1] + llista3[2] + llista4[3] + llista5[4])
+			+ ".";
+
+	llistes = "<br>" + "<br>" + llista1.join() + "<br>" + llista2.join()
+			+ "<br>" + llista3.join() + "<br>" + llista4.join() + "<br>"
+			+ llista5.join();
+
+	return llistes + resposta;
+}
+
+function exercici26() {
+	var calculMatriu = 0;
+	var resposta = "";
+	var costat = prompt("Introdueix el numero de costat de la matriu (n x n)",
+			"3");
+	var cadena = prompt("Introdueix tots els números de la matriu de costat "
+			+ costat, "");
+	var casella = 0;
+
+	calculMatriu = parseInt(cadena.charAt(casella));
+
+	for (var i = 0; i < parseInt(costat) - 1; i++) {
+		casella = casella + parseInt(costat) + 1;
+		calculMatriu += parseInt(cadena.charAt(casella));
+	}
+
+	resposta = "La suma de la diagonal es " + calculMatriu + ".";
+
+	return resposta;
+}
+
+function exercici27() {
+	var resposta = "";
+	var respostaElements = "";
+	var respostaCompara = "";
+	var numerosElements = [];
+	var numerosCompara = [];
+	var costat = prompt("Introdueix el numero de costat de la matriu (n x n)",
+			"3");
+	var cadena = prompt("Introdueix tots els números de la matriu de costat "
+			+ costat, "");
+	var compara = prompt("Introdueix el numero a comparar", "");
+	var casella = 0;
+
+	numerosElements.push(parseInt(cadena.charAt(casella)));
+
+	for (var i = 0; i < parseInt(costat) - 1; i++) {
+		casella = casella + parseInt(costat) + 1;
+		numerosElements.push(parseInt(cadena.charAt(casella)));
+	}
+
+	for (var j = 0; j < numerosElements.length; j++) {
+		if (numerosElements[j] > parseInt(compara)) {
+			numerosCompara.push(numerosElements[j]);
+		}
+	}
+
+	respostaElements = "Els numeros de la diagonal a comparar son "
+			+ numerosElements.join() + ".";
+	respostaCompara = "Els numeros de la diagonal mes grans que " + compara
+			+ " son " + numerosCompara.join() + ".";
+
+	resposta = respostaElements + "<br>" + respostaCompara;
+
+	return resposta;
+}
+
+function exercici28() {
+	var primeraColumna = [];
+	var resposta = "";
+	var respostaSuma = "";
+	var suma = 0;
+	var costat = prompt("Introdueix el numero de costat de la matriu (n x n)",
+			"3");
+	var cadena = prompt("Introdueix tots els números de la matriu de costat "
+			+ costat, "");
+
+	for (var i = 0; i < parseInt(costat); i++) {
+		primeraColumna.push(cadena.charAt(i));
+		suma += parseInt(primeraColumna[i]);
+	}
+
+	resposta = "Els numeros de la primera columna son " + primeraColumna.join()
+			+ ".";
+	respostaSuma = "El resultat de la suma dels numeros de la primera columna es "
+			+ suma + ".";
+
+	return resposta + "<br>" + respostaSuma;
 }
