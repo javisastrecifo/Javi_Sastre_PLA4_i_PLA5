@@ -44,3 +44,6 @@ El programa demana el número de costat d'una matriu i en demana els números qu
 
 Full 2 Exercici 8
 El programa demana el número de costat d'una matriu i tots els elements que la formen. En acabat, enuncia els números que formen la primera columna i els suma.
+
+Javi Sastre
+24/06/2019
